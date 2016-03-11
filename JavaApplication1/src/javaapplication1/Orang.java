@@ -7,8 +7,47 @@ package javaapplication1;
 
 /**
  *
- * @author Synricha
+ * @author Rizky
  */
-public class Orang {
-    
+public abstract class Orang {
+   private String nama;
+   private String noTlp;
+   private String email;
+   
+   public Orang (String nama, String noTlp, String email) {
+       this.nama = nama;
+       this.noTlp = noTlp;
+       this.email = email;
+   }
+   
+   public void setNama(String nama) {
+       this.nama = nama;
+   }
+   
+   public String getNama() {
+       return nama;
+   }
+   
+   public void setnoTlp(String noTlp) {
+       this.noTlp = noTlp;
+   }
+   
+   public String getnoTlp() {
+       return noTlp;
+   }
+   
+   public void setEmail(String email) {
+       this.email = email;
+   }
+   
+   public String getEmail() {
+       return email;
+   }
+   
+   public void viewDaftarPinjam() {
+       
+   }
+   public void viewDaftarBarangPinjam() {
+   
+   }
 }
