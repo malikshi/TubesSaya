@@ -10,5 +10,13 @@ package javaapplication1;
  * @author Synricha
  */
 public class Peminjaman {
+    private Buku[] pinjaman = new Buku[];
+    private Anggota peminjaman;
     
+    public addPinjaman(Buku b){
+        
+    }
+    public setAnggota(Anggota a){
+        
+    }
 }

@@ -10,5 +10,15 @@ package javaapplication1;
  * @author Synricha
  */
 public class Buku {
+    private String idBuku;
+    private String namaBuku;
+    private String kondisi;
     
+    public String getBuku(){
+        return idBuku;
+    }
+
+    public void removeBarang(String idBuku, String namaBuku, String kondisi){
+        
+    }
 }
