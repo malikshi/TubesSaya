@@ -10,13 +10,26 @@ package javaapplication1;
  * @author Synricha
  */
 public class Peminjaman {
-    private Buku[] pinjaman = new Buku[];
-    private Anggota peminjaman;
+    private static  Buku[] pinjaman = new Buku[5];
+    private Anggota peminjam;
+    private int npinjam=0;
     
-    public addPinjaman(Buku b){
-        
+    public void addPinjaman(Buku b){
+        if(npinjam<5){
+            this.pinjaman[npinjam]= b;
+            npinjam++;
+        }
     }
-    public setAnggota(Anggota a){
-        
+    public int getJumlahPinjam(){
+        return npinjam;
+    }
+    public Buku getBuku(int i){
+        return pinjaman[i];
+    }
+    public void setAnggota(Anggota a){
+        this.peminjam=a;
+    }
+    public Anggota getAnggota(){
+        return peminjam;
     }
 }
