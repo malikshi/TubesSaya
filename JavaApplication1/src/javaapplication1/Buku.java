@@ -73,6 +73,4 @@ public class Buku {
         this.jumlah_terpinjam = jumlah_terpinjam;
     }
     
-    
-
 }
