@@ -19,7 +19,9 @@ public abstract class Orang {
        this.noTlp = noTlp;
        this.email = email;
    }
-   
+   public Orang(){
+       
+   }
    public void setNama(String nama) {
        this.nama = nama;
    }
@@ -31,6 +33,14 @@ public abstract class Orang {
    public void setnoTlp(String noTlp) {
        this.noTlp = noTlp;
    }
+
+    public String getNoTlp() {
+        return noTlp;
+    }
+
+    public void setNoTlp(String noTlp) {
+        this.noTlp = noTlp;
+    }
    
    public String getnoTlp() {
        return noTlp;
