@@ -72,5 +72,13 @@ public class Buku {
     public void setJumlah_terpinjam(int jumlah_terpinjam) {
         this.jumlah_terpinjam = jumlah_terpinjam;
     }
+
+    public Buku() {
+    }
+
+    @Override
+    public String toString() {
+        return "Buku" + "\nidBuku=" + getIdBuku() + "\nnamaBuku=" + getNamaBuku() + "\nkondisi=" + getKondisi();
+    }
     
 }
