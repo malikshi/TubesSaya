@@ -10,8 +10,30 @@ package javaapplication1;
  * @author Rizky
  */
 public class Anggota extends Orang {
+
     private long idAnggota;
     private String alamat;
+    private String username;
+    private String password;
+
+    public Anggota() {
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public long getIdAnggota() {
         return idAnggota;
@@ -29,43 +51,26 @@ public class Anggota extends Orang {
         this.alamat = alamat;
     }
 
-    public Anggota(long idAnggota,  String nama, String noTlp, String email) {
+    public Anggota(long idAnggota, String username, String password, String nama, String alamat, String noTlp, String email) {
         super(nama, noTlp, email);
-        this.idAnggota=idAnggota;
+        setIdAnggota(idAnggota);
+        this.alamat = alamat;
+        this.username = username;
+        setPassword(password);
     }
-    
-//    public void Daftar(String idAnggota, String nama, long noTlp, String email) {
-//        
-//    }
-//    
-//        public void viewDaftarPinjam(String idBuku, String namaBuku, String kondisi) {
-//        int i=0;
-//        do {    
-//            System.out.println("ID Buku     : " +Buku[i].idBuku);
-//            System.out.println("Nama Buku   : " +Buku[i].namaBuku);
-//            System.out.println("Kondisi     : " +Buku[i].kondisi);
-//            i = i+1;
-//        while(Buku[i]!=null) }     
-//    }
-//    
-//    public void viewDaftarBarangPinjam(String idBuku, String namaBuku, String tanggal) {
-//        do {    
-//            System.out.println("ID      : " +Buku[i].idBuku);
-//            System.out.println("Nama    : " +Buku[i].namaBuku);
-//            System.out.println("Tanggal : " +Buku[i].tanggal);
-//            i = i+1;
-//        while(Buku[i]!=null)
-//    }
-    
+
     public void setAnggota(String nama, long idAnggota) {
         super.setNama(nama);
         this.idAnggota = idAnggota;
     }
-    
+
     public String getAnggota() {
         return super.getNama();
     }
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "Anggota" + "\nidAnggota=" + getIdAnggota() + "\nusername=" + getUsername() + "\npassword=" + getPassword() + " \nalamat=" + getAlamat();
+    }
+
 }
