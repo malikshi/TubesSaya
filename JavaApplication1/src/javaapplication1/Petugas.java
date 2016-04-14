@@ -10,53 +10,52 @@ package javaapplication1;
  * @author Synricha
  */
 public class Petugas extends Orang {
+
     private long idPetugas;
+    private String username;
+    private String password;
     private String alamat;
 
-    public Petugas(long idPetugas, String nama, String noTlp, String email) {
-        super(nama, noTlp, email);
-        this.idPetugas= idPetugas;
+    @Override
+    public String toString() {
+        return "Anggota" + "\nidPetugas=" + getIdPetugas() + "\nusername=" + getUsername() + "\npassword=" + getPassword() + " \nalamat=" + getAlamat();
     }
-    public Petugas(){
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Petugas(long idPetugas, String username, String password, String nama, String alamat, String noTlp, String email) {
+        super(nama, noTlp, email);
+        setIdPetugas(idPetugas);
+        this.username = username;
+        setPassword(password);
+        this.alamat = alamat;
+    }
+
+    public Petugas() {
         super();
-    };
+    }
 
     public long getIdPetugas() {
         return idPetugas;
     }
+
     public void setIdPetugas(long idPetugas) {
         this.idPetugas = idPetugas;
     }
-    
-    
-    
-//    public void viewDaftarPinjam(String idBuku, String namaBuku, String kondisi) {
-//        int i=0;
-//        do {    
-//            System.out.println("ID Buku     : " +Buku[i].idBuku);
-//            System.out.println("Nama Buku   : " +Buku[i].namaBuku);
-//            System.out.println("Kondisi     : " +Buku[i].kondisi);
-//            i = i+1;
-//        while(Buku[i]!=null) }     
-//    }
-    
-//    public void viewDaftarBarangPinjam(String idBuku, String namaBuku, String tanggal) {
-//        do {    
-//            System.out.println("ID      : " +Buku[i].idBuku);
-//            System.out.println("Nama    : " +Buku[i].namaBuku);
-//            System.out.println("Tanggal : " +Buku[i].tanggal);
-//            i = i+1;
-//        while(Buku[i]!=null)
-//    }
-//    public void editStatus(String idBuku, String namaBuku, String kondisi){
-//    
-//    }
-//    public void tambahPinjam(String idBuku, String namaBuku, String Tanggal){
-//        
-//    }
-//    public void editPinjam(String idBuku, String namaBuku){
-//        
-//    }
 
     public String getAlamat() {
         return alamat;
@@ -66,4 +65,3 @@ public class Petugas extends Orang {
         this.alamat = alamat;
     }
 }
- 
