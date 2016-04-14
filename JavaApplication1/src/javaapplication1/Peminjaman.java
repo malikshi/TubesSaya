@@ -98,4 +98,5 @@ public class Peminjaman {
     public Anggota getAnggota() {
         return peminjam;
     }
+    
 }
